@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>exs</title>
+    <script src="exs.js"></script>
+</head>
+<body>
+<ul>
+    <li>
+        <strong>Explain why do we want sometimes to use setImmediate instead of using setTimeout?</strong>
+        <p>When we have IO on event loop's 4th queue and we want to run function before close event is called we can use setImmediate.
+            If event loop's queues are empty then setTimeout and setImmediate will called in order of event loop.
+        </p>
+    </li>
+    <li>
+        <strong>Explain the difference between process.nextTick and setImmediate?</strong>
+        <p>Difference is nextTick's function will be called immediately after finishing current function regardless of event loops queue because it has more priority.
+            setImmediate will be called on 5th queue of event loop so it has less priority.
+        </p>
+    </li>
+    <li>
+        <strong>Name 10 core modules that Node provides by default.</strong>
+        <ol>
+            <li>http - includes classes, methods and events to create Node.js http server. </li>
+            <li>url - includes methods for URL resolution and parsing. </li>
+            <li>querystring - includes methods to deal with query string. </li>
+            <li>path - includes methods to deal with file paths. </li>
+            <li>fs - includes classes, methods, and events to work with file I/O. </li>
+            <li>util - includes utility functions useful for programmers. </li>
+            <li>net - To create servers and clients. </li>
+            <li>stream - To handle streaming data. </li>
+            <li>tls - To implement TLS and SSL protocols. </li>
+            <li>vm - To compile JavaScript code in a virtual machine. </li>
+        </ol>
+    </li>
+</ul>
+</body>
+</html>
