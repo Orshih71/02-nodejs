@@ -1,7 +1,9 @@
-
+function plucks(b, arr){
+    let val = b?Math.max(...arr):Math.min(...arr);
+    console.log(arr.filter(e=>e!==val));
+};
 Array.prototype.pluck = function(b){
-    let val = (b?Math.max(this):Math.min(this));
-    console.log();
+    setImmediate(() => plucks(b,this));
 };
 
 console.log('start');
